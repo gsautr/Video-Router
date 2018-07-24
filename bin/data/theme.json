@@ -1,0 +1,28 @@
+{
+"themeColors": [
+  "Background",
+  "Element Background",
+  "Text Titles",
+  "Text Labels",
+  "Text Values",
+  "Active Text",
+  "Markers",
+  "Outer Borders",
+  "Inner Borders",
+  "Splines",
+  "Inactive Toggle",
+  "Active Toggle",
+  "Handles",
+  "Slider Shapes",
+  "Inactive Button",
+  "Active Button",
+  "Dropdown",
+  "Hovered Areas",
+  "Active Areas",
+  "Inactive Areas",
+  "Graph Splines",
+  "Graph Shapes",
+  "Touch Splines",
+  "Touch Shapes"
+  ]
+}

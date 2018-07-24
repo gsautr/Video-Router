@@ -1,0 +1,834 @@
+{
+   "10" : {
+      "name" : "Toggle",
+      "template" : {
+         "data" : {
+            "value" : false
+         },
+         "def" : {
+            "id" : "FluidUIToggle7",
+            "name" : "Toggle",
+            "saveable" : true,
+            "subType" : 10,
+            "type" : 103,
+            "url" : "FluidUIToggle7"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle10" : null,
+            "icon" : null
+         },
+         "struct" : {
+            "childHeight" : 50,
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 398,
+            "x" : 400,
+            "y" : 200
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "102" : {
+      "name" : "Group",
+      "template" : {
+         "def" : {
+            "id" : "FluidUIGroup3",
+            "name" : "Group",
+            "saveable" : true,
+            "subType" : 102,
+            "type" : 102,
+            "url" : "FluidUIGroup3"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle8" : null,
+            "max" : 1,
+            "min" : 0,
+            "scrollY" : 0
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 100,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "multiWidth" : 0.5,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 199,
+            "x" : 199,
+            "y" : 1300
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "104" : {
+      "name" : "Row",
+      "template" : {
+         "def" : {
+            "id" : "FluidUIRow10",
+            "name" : "Row",
+            "saveable" : true,
+            "subType" : 104,
+            "type" : 102,
+            "url" : "FluidUIRow10"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle7" : null,
+            "max" : 1,
+            "min" : 0,
+            "scrollY" : 0
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 398,
+            "x" : 0,
+            "y" : 1600
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "105" : {
+      "name" : "Default",
+      "template" : {
+         "def" : {
+            "id" : "FluidUIFloaty",
+            "name" : "Floaty",
+            "subType" : 105,
+            "type" : 102,
+            "url" : "FluidUIFloaty"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle10" : null,
+            "max" : 0,
+            "min" : -150,
+            "scrollX" : 0,
+            "scrollY" : 0
+         },
+         "struct" : {
+            "childHeight" : 250,
+            "floating" : true,
+            "height" : 100,
+            "labelStyle" : null,
+            "multiHeight" : 2,
+            "scrollable" : true,
+            "visible" : true,
+            "width" : 400,
+            "x" : 400,
+            "y" : 0,
+            "zIndex" : 9999
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "12" : {
+      "name" : "Range",
+      "template" : {
+         "data" : {
+            "fboValueMax" : null,
+            "fboValueMin" : null,
+            "smoothValueMax" : null,
+            "smoothValueMin" : null,
+            "touchValueMax" : null,
+            "touchValueMin" : null,
+            "valueMax" : 0.75,
+            "valueMin" : 0.25
+         },
+         "def" : {
+            "id" : "FluidUIRange Slider",
+            "name" : "Range Slider",
+            "saveable" : true,
+            "subType" : 12,
+            "type" : 103,
+            "url" : "FluidUIRange Slider"
+         },
+         "param" : {
+            "active" : false,
+            "exponential" : 1,
+            "icon" : null,
+            "markStyle" : 302,
+            "marks" : 3,
+            "max" : 1,
+            "min" : 0
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "scrollable" : null,
+            "vertical" : false,
+            "visible" : true,
+            "width" : 398,
+            "x" : 0,
+            "y" : 600
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "13" : {
+      "name" : "Axis Slider",
+      "template" : {
+         "data" : {
+            "fboValueX" : null,
+            "fboValueY" : null,
+            "smoothValueX" : null,
+            "smoothValueY" : null,
+            "touchValueX" : null,
+            "touchValueY" : null,
+            "valueX" : 0.5,
+            "valueY" : 0.5
+         },
+         "def" : {
+            "id" : "FluidUIAxis Slider1",
+            "name" : "Axis Slider",
+            "saveable" : true,
+            "subType" : 13,
+            "type" : 103,
+            "url" : "FluidUIAxis Slider1"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle13" : null,
+            "exponential" : 1,
+            "icon" : null,
+            "markStyle" : 302,
+            "marks" : 3,
+            "max" : 1,
+            "maxX" : 1,
+            "maxY" : 1,
+            "min" : 0,
+            "minX" : 0,
+            "minY" : 0
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 100,
+            "labelStyle" : null,
+            "multiHeight" : 2,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 199,
+            "x" : 199,
+            "y" : 300
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "14" : {
+      "name" : "Matrix",
+      "template" : {
+         "data" : {
+            "options" : [
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null,
+               null
+            ]
+         },
+         "def" : {
+            "id" : "FluidUIMatrix1",
+            "name" : "Matrix",
+            "saveable" : true,
+            "subType" : 14,
+            "type" : 103,
+            "url" : "FluidUIMatrix1"
+         },
+         "param" : {
+            "active" : false,
+            "cols" : 16,
+            "elementStyle14" : null,
+            "matrixMode" : 3,
+            "max" : 1,
+            "min" : 0,
+            "rows" : 1
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 100,
+            "labelStyle" : null,
+            "multiHeight" : 2,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 398,
+            "x" : 0,
+            "y" : 1100
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "15" : {
+      "name" : "Knob",
+      "template" : {
+         "data" : {
+            "fboValue" : null,
+            "smoothValue" : null,
+            "touchValue" : null,
+            "value" : 0.5
+         },
+         "def" : {
+            "id" : "FluidUIKnob2",
+            "name" : "Knob",
+            "saveable" : true,
+            "subType" : 15,
+            "type" : 103,
+            "url" : "FluidUIKnob2"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle15" : null,
+            "exponential" : 1,
+            "icon" : null,
+            "markStyle" : 302,
+            "marks" : 3,
+            "max" : 1,
+            "min" : 0
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 150,
+            "labelStyle" : null,
+            "multiHeight" : 3,
+            "multiWidth" : 0.3333333432674408,
+            "scrollable" : null,
+            "vertical" : true,
+            "visible" : true,
+            "width" : 132,
+            "x" : 264,
+            "y" : 450
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "16" : {
+      "name" : "Graph",
+      "template" : {
+         "def" : {
+            "id" : "FluidUIGraph1",
+            "name" : "Graph",
+            "saveable" : true,
+            "subType" : 16,
+            "type" : 103,
+            "url" : "FluidUIGraph1"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle16" : 2,
+            "maximum" : 1,
+            "minimum" : -1
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 398,
+            "x" : 0,
+            "y" : 650
+         },
+         "theme" : {
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "17" : {
+      "name" : "Button",
+      "template" : {
+         "data" : {
+            "value" : null
+         },
+         "def" : {
+            "id" : "FluidUIButton2",
+            "name" : "Button",
+            "saveable" : true,
+            "subType" : 17,
+            "type" : 103,
+            "url" : "FluidUIButton2"
+         },
+         "param" : {
+            "active" : false,
+            "icon" : null
+         },
+         "struct" : {
+            "childHeight" : 50,
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 398,
+            "x" : 400,
+            "y" : 0
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "18" : {
+      "name" : "Presets",
+      "template" : {
+         "data" : {
+            "options" : [
+               {
+                  "icon" : null,
+                  "preset" : null
+               },
+               {
+                  "icon" : null,
+                  "preset" : null
+               },
+               {
+                  "icon" : null,
+                  "preset" : null
+               },
+               {
+                  "icon" : null,
+                  "preset" : null
+               },
+               {
+                  "icon" : null,
+                  "preset" : null
+               },
+               {
+                  "icon" : null,
+                  "preset" : null
+               },
+               {
+                  "icon" : null,
+                  "preset" : null
+               },
+               {
+                  "icon" : null,
+                  "preset" : null
+               }
+            ]
+         },
+         "def" : {
+            "id" : "FluidUIPresets",
+            "name" : "Presets",
+            "saveable" : true,
+            "subType" : 18,
+            "type" : 103,
+            "url" : "FluidUIPresets"
+         },
+         "param" : {
+            "active" : false,
+            "cols" : 4,
+            "elementStyle18" : null,
+            "matrixMode" : 1,
+            "rows" : 2
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 100,
+            "labelStyle" : null,
+            "multiHeight" : 2,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 398,
+            "x" : 0,
+            "y" : 750
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "19" : {
+      "name" : "Vector",
+      "template" : {
+         "data" : {
+            "options" : null
+         },
+         "def" : {
+            "id" : "FluidUIVector1",
+            "name" : "Vector",
+            "saveable" : true,
+            "subType" : 19,
+            "type" : 103,
+            "url" : "FluidUIVector1"
+         },
+         "param" : {
+            "active" : false,
+            "exponential" : 1,
+            "markStyle" : 302,
+            "marks" : 3,
+            "max" : 1,
+            "min" : 0,
+            "vectorMode" : 2
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 100,
+            "labelStyle" : null,
+            "multiHeight" : 2,
+            "multiWidth" : 0.5,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 199,
+            "x" : 199,
+            "y" : 1200
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "21" : {
+      "name" : "Randomise",
+      "template" : {
+         "data" : {
+            "value" : null
+         },
+         "def" : {
+            "id" : "FluidUIRandomise1",
+            "name" : "Randomise",
+            "saveable" : true,
+            "subType" : 21,
+            "type" : 103,
+            "url" : "FluidUIRandomise1"
+         },
+         "param" : {
+            "active" : false,
+            "icon" : null
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 398,
+            "x" : 0,
+            "y" : 1650
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "5" : {
+      "name" : "Dropdown",
+      "template" : {
+         "data" : {
+            "index" : 0,
+            "options" : [
+               {
+                  "icon" : "",
+                  "name" : "One",
+                  "value" : 0
+               },
+               {
+                  "icon" : "",
+                  "name" : "Two",
+                  "value" : 1
+               },
+               {
+                  "icon" : "",
+                  "name" : "Three",
+                  "value" : 2
+               }
+            ],
+            "text" : "One"
+         },
+         "def" : {
+            "id" : "FluidUIDropdown",
+            "name" : "Dropdown",
+            "saveable" : true,
+            "subType" : 5,
+            "type" : 103,
+            "url" : "FluidUIDropdown"
+         },
+         "param" : {
+            "active" : false,
+            "cols" : 2,
+            "icon" : null
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 199,
+            "x" : 0,
+            "y" : 300
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "6" : {
+      "name" : "Label",
+      "template" : {
+         "data" : {
+            "text" : ""
+         },
+         "def" : {
+            "id" : "FluidUILabel1",
+            "name" : "Label",
+            "saveable" : true,
+            "subType" : 6,
+            "type" : 103,
+            "url" : "FluidUILabel1"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle6" : null,
+            "icon" : null
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "multiWidth" : 0.5,
+            "scrollable" : null,
+            "visible" : true,
+            "width" : 99,
+            "x" : 199,
+            "y" : 250
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "7" : {
+      "name" : "Slider",
+      "template" : {
+         "data" : {
+            "fboValue" : 0.5,
+            "smoothValue" : null,
+            "touchValue" : 0.5,
+            "value" : 0.5
+         },
+         "def" : {
+            "id" : "FluidUISlider15",
+            "name" : "Slider",
+            "saveable" : true,
+            "subType" : 7,
+            "type" : 103,
+            "url" : "FluidUISlider15"
+         },
+         "param" : {
+            "active" : false,
+            "elementStyle7" : null,
+            "exponential" : 1,
+            "icon" : null,
+            "markStyle" : 302,
+            "marks" : 3,
+            "max" : 1,
+            "min" : 0
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 50,
+            "labelStyle" : null,
+            "multiHeight" : 1,
+            "multiWidth" : 0.3333333432674408,
+            "scrollable" : null,
+            "vertical" : false,
+            "visible" : true,
+            "width" : 132,
+            "x" : 264,
+            "y" : 1600
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   },
+   "8" : {
+      "name" : "Tabs",
+      "template" : {
+         "data" : {
+            "index" : 0,
+            "options" : [
+               {
+                  "icon" : "",
+                  "name" : "One",
+                  "state" : true,
+                  "value" : 0
+               },
+               {
+                  "icon" : "",
+                  "name" : "Two",
+                  "state" : false,
+                  "value" : 1
+               },
+               {
+                  "icon" : "",
+                  "name" : "Three",
+                  "state" : false,
+                  "value" : 2
+               }
+            ],
+            "text" : "One"
+         },
+         "def" : {
+            "id" : "FluidUITabs3",
+            "name" : "Tabs",
+            "saveable" : true,
+            "subType" : 8,
+            "type" : 103,
+            "url" : "FluidUITabs3"
+         },
+         "param" : {
+            "active" : false,
+            "cols" : 1,
+            "elementStyle8" : null,
+            "matrixMode" : 1,
+            "numeric" : false,
+            "rows" : 3,
+            "showHideWithOptions" : false
+         },
+         "struct" : {
+            "floating" : false,
+            "height" : 100,
+            "labelStyle" : null,
+            "multiHeight" : 2,
+            "scrollable" : null,
+            "vertical" : true,
+            "visible" : true,
+            "width" : 199,
+            "x" : 199,
+            "y" : 1300
+         },
+         "theme" : {
+            "colorIndex" : null,
+            "padding" : null,
+            "paddingBottom" : 1,
+            "paddingLeft" : 1,
+            "paddingRight" : 1,
+            "paddingTop" : 1
+         }
+      }
+   }
+}
+
