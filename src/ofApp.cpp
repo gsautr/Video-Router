@@ -4,8 +4,13 @@
 void ofApp::setup(){
     ofLog::setAutoSpace(true);
     ofSetFrameRate(60);
-    
-    browser.setup({FLUID_BROWSER_VIDEO}, {"/Users/Gilbert/Google Drive/-- Autr --/-- Videos --/__Instas"});
+    string folder;
+#ifdef TARGET_LINUX_ARM
+    folder = "/home/pi/";
+#else
+    folder = "/Users/Gilbert/Google Drive/-- Autr --/-- Videos --/__Instas";
+#endif
+    browser.setup({FLUID_BROWSER_VIDEO}, {folder});
     buffer.load(browser.getUnits());
     
     randomiseVideo();
