@@ -1,0 +1,19 @@
+*.lock
+.DS_Store
+*.swp
+*~.nib
+._*
+*.xcodeproj
+!xcshareddata
+*.app
+*.log
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+# XCode 4
+xcuserdata
+*.xcworkspace
+[Dd]ebug*/
+[Rr]elease*/
