@@ -1,5 +1,10 @@
 ofxFluidTools
 ofxFluidUi
+ofxGui
+ofxISF
 ofxJSON
+ofxMidi
+ofxOsc
+ofxPoco
 ofxSvg
-ofxTimeMeasurements
+ofxSyphon
