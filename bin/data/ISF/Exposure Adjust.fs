@@ -11,8 +11,8 @@
 		{
 			"NAME": "inputEV",
 			"TYPE": "float",
-			"MIN": -10.0,
-			"MAX": 10.0,
+			"MIN": -5.0,
+			"MAX": 5.0,
 			"DEFAULT": 0.5
 		}
 	]

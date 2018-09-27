@@ -2,6 +2,7 @@
 #define FLUID_TOOL_BROWSER
 #define FLUID_TOOL_BUFFER
 #define FLUID_TOOL_SHADERS
+#define FLUID_TOOL_BLENDER
 #define FLUID_TOOL_OUTPUT
 
 #include "ofMain.h"
@@ -50,8 +51,6 @@ public:
     FluidBuffer bufferB;
     FluidShadersUi shadersB;
     
-    FluidSlider * alphaUi;
-    FluidTabs * blendUi;
     
     MidiUi midi;
     
@@ -62,6 +61,9 @@ public:
     
     bool bTex;
 		
+    int fboIndex;
+    
+    FluidBlender blender;
     
     
 };

@@ -9,6 +9,8 @@ void ofApp::setup(){
     
     ofEnableAlphaBlending();
     
+    fboIndex = 0;
+    
     
 #ifdef TARGET_OSX
     ofSetDataPathRoot("../Resources/data/");
@@ -26,7 +28,6 @@ void ofApp::setup(){
     ui->setup();
 //    ui->setSmoothing(0.8);
     
-    midi.setup(ui);
     FluidGroup * row = &ui->addRow("Row");
     
     
@@ -43,21 +44,19 @@ void ofApp::setup(){
     shaders.loadISF("ISF/Exposure Adjust");
     shaders.loadISF("ISF/Color Invert");
     shaders.loadISF("ISF/Zoom");
-    shaders.loadISF("ISF/XYZoom");
-    shaders.loadISF("ISF/Rotate");
-    shaders.loadISF("ISF/Sharpen RGB");
-//    shaders.loadISF("ISF/ZoomBlur");
-//    shaders.loadISF("ISF/3d Rotate");
-    shaders.loadISF("ISF/RGB EQ");
-    shaders.loadISF("ISF/Shift Hue");
+//    shaders.loadISF("ISF/XYZoom");
+//    shaders.loadISF("ISF/Rotate");
+//    shaders.loadISF("ISF/Sharpen RGB");
+////    shaders.loadISF("ISF/ZoomBlur");
+////    shaders.loadISF("ISF/3d Rotate");
+//    shaders.loadISF("ISF/RGB EQ");
+//    shaders.loadISF("ISF/Shift Hue");
     
     
     FluidUi * bGroup = &row->addGroup("B");
     browserB.setup(bGroup, {FLUID_BROWSER_VIDEO, FLUID_BROWSER_SYPHON, FLUID_BROWSER_GRABBER}, {});
     browserB.addSource("Harpham.mov");
     
-//    blendUi = &bGroup->addTabs("Blend", {"Add", "Multiply"});
-    alphaUi = &bGroup->addSlider("Opacity", 0, 0, 255);
     
     FluidGroup * shadersBGroup = &bGroup->addGroup("Shaders");
     shadersB.setup(shadersBGroup);
@@ -72,6 +71,11 @@ void ofApp::setup(){
     output.setup("Main Output");
 //    processor.loadISF("ISF/Duotone");
     
+    blender.setup(ui);
+    blender.addSource(shaders.fbo, 1, 0);
+    blender.addSource(shadersB.fbo, 0, 0);
+
+    midi.setup(ui);
     
     lastInteractedChanged = ui->lastInteractedUpdated.newListener([this](string & s){
         midi.setCurrentElement(ui->getElementById(s));
@@ -103,7 +107,7 @@ void ofApp::update(){
     shadersB.update();
     bufferB.update(browserB.getCurrent());
     ui->update();
-    output.update();
+//    output.update();
     
 }
 
@@ -122,40 +126,31 @@ void ofApp::drawOutput(ofEventArgs & args){
     }
         
 //    }
-    fbo.begin();
-    ofEnableAlphaBlending();
-    ofClear(0);
-    ofClearAlpha();
-    ofSetColor(255);
-    shaders.draw(buffer);
-    ofSetColor(255,255,255,alphaUi->getValue());
-    ofEnableBlendMode(OF_BLENDMODE_ADD);
-    shadersB.draw(bufferB);
-    fbo.end();
     
-    output.draw(fbo);
-    output.publish();
+    shaders.drawFbo(buffer);
+    shadersB.drawFbo(bufferB);
     
-//    buffer.getTexture().draw(0,0, ofGetWidth(), ofGetHeight());
-//    shaders.chain.draw(0,0, ofGetWidth() , ofGetHeight());
-    fbo.draw(0,0, ofGetWidth(), ofGetHeight());
+    blender.draw(0,0,ofGetWidth(), ofGetHeight());
+//    shaders.fbo.draw(0,0,ofGetWidth(), ofGetHeight());
+    
+    output.publish(blender.fbo.getTexture());
     
     if (!bTex) {
         
         browser.addTexture("Main Output");
-        buffer.addTexture("Main Output", output.fbo.getTexture());
+        buffer.addTexture("Main Output", blender.fbo.getTexture());
         bTex = true;
     }
-    
-    
-//    ofLog() << "OUTP" << output.fbo.getWidth() << output.fbo.getHeight();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     
     ui->draw(0,0, ofGetWidth(), ofGetHeight());
-    
+//    ofSetColor(255,0,0,100);
+//    ofDrawRectangle(ui->all[fboIndex]->getBackgroundArea());
+//    ofSetColor(255);
+//    ofDrawBitmapString(midi.lastMessage, 10, ofGetHeight() - 60);
     if (midi.isMidiLearning()) {
         
         
@@ -190,11 +185,12 @@ void ofApp::exitOutput(ofEventArgs & args) {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(ofKeyEventArgs & args){
-    
 }
 //--------------------------------------------------------------
 void ofApp::keyPressedOutput(ofKeyEventArgs & args){
     if (args.key == 'f') ofToggleFullscreen();
+    if (args.key == 'w') fboIndex += 1;
+    if (args.key == 'q') fboIndex -= 1;
 }
 
 //--------------------------------------------------------------
@@ -250,6 +246,14 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
+void ofApp::dragEvent(ofDragInfo dragInfo){
+    if (shaders.getBounds().inside(dragInfo.position)) shaders.loadFiles(dragInfo.files);
+    if (shadersB.getBounds().inside(dragInfo.position)) shadersB.loadFiles(dragInfo.files);
+    ofRectangle rLeft(0, 0, ofGetWidth()/2, ofGetHeight());
+    ofRectangle rRight = rLeft;
+    rRight.x += ofGetWidth() / 2;
+    
+    if (rLeft.inside(dragInfo.position)) browser.addSources(dragInfo.files);
+    if (rRight.inside(dragInfo.position)) browserB.addSources(dragInfo.files);
+    
 }

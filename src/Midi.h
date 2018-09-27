@@ -10,7 +10,7 @@ public:
     ofxMidiIn midiIn;
     std::vector<ofxMidiMessage> midiMessages;
     std::size_t maxMessages = 10; //< max number of messages to keep track of
-    
+    string lastMessage;
     FluidUi * currentUiElement;
     
     bool bMidiLearn;
@@ -43,6 +43,7 @@ public:
             if(message.status < MIDI_SYSEX) {
                 
                 if(message.status == MIDI_CONTROL_CHANGE) {
+                    lastMessage = "Last MIDI message: CC" + ofToString(message.control) + " " + ofToString(message.value);
                     if (bMidiLearn) {
                         assignments[message.control] = currentUiElement;
                         bMidiLearn = false;
@@ -65,6 +66,7 @@ public:
                             ele->setState(!ele->getState());
                         }
                     }
+                    
 //                    ofLog() << message.control << message.value;
                 }
                 

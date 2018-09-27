@@ -12,7 +12,7 @@
 			"NAME": "level",
 			"TYPE": "float",
 			"MIN": 0.01,
-			"MAX": 10.0,
+			"MAX": 1.0,
 			"DEFAULT": 1.0
 		},
 		{
