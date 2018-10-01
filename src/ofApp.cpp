@@ -36,12 +36,13 @@ void ofApp::setup(){
     sourceGroup = &row->addGroup("A");
     
     browser.setup(sourceGroup, {FLUID_BROWSER_VIDEO, FLUID_BROWSER_SYPHON, FLUID_BROWSER_GRABBER}, {});
-    browser.addSource("Harpham.mov");
+    browser.addDir("videos");
     FluidGroup * shadersGroup = &sourceGroup->addGroup("Shaders");
     shaders.setup(shadersGroup);
     
 //    shaders.loadISF("ISF/Luma Key");
-    shaders.loadISF("ISF/Exposure Adjust");
+    shaders.loadISF("ISF/Bright");
+    shaders.loadISF("ISF/Color Controls");
     shaders.loadISF("ISF/Color Invert");
     shaders.loadISF("ISF/Zoom");
 //    shaders.loadISF("ISF/XYZoom");
@@ -55,7 +56,8 @@ void ofApp::setup(){
     
     FluidUi * bGroup = &row->addGroup("B");
     browserB.setup(bGroup, {FLUID_BROWSER_VIDEO, FLUID_BROWSER_SYPHON, FLUID_BROWSER_GRABBER}, {});
-    browserB.addSource("Harpham.mov");
+    browserB.addDir("videos");
+    
     
     
     FluidGroup * shadersBGroup = &bGroup->addGroup("Shaders");

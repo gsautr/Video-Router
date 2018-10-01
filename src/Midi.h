@@ -66,8 +66,6 @@ public:
                             ele->setState(!ele->getState());
                         }
                     }
-                    
-//                    ofLog() << message.control << message.value;
                 }
                 
             }
