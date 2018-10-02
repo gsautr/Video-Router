@@ -40,6 +40,7 @@ void ofApp::setup(){
     FluidGroup * shadersGroup = &sourceGroup->addGroup("Shaders");
     shaders.setup(shadersGroup);
     
+    
 //    shaders.loadISF("ISF/Luma Key");
     shaders.loadISF("ISF/Bright");
     shaders.loadISF("ISF/Color Controls");
@@ -141,6 +142,8 @@ void ofApp::drawOutput(ofEventArgs & args){
         
         browser.addTexture("Main Output");
         buffer.addTexture("Main Output", blender.fbo.getTexture());
+        browserB.addTexture("Main Output");
+        bufferB.addTexture("Main Output", blender.fbo.getTexture());
         bTex = true;
     }
 }
