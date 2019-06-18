@@ -4,6 +4,8 @@ An app originally created for experimenting with digital feedback loops on the G
 
 * Two-channel VJ app; videos can be loaded by dragging and dropping onto either channel
 * [ISF format shaders](https://www.interactiveshaderformat.com/) loaded the same way
+* Syphon input and output; feedback loop can be created via Syphon or:
+* Master channel output/input feedback loop
 * For analogue experiments, 32bit version supports older CVBS USB capture dongles
 
 Updates on their way, just as soon as I finish [ofxFluidUi](https://github.com/autr/ofxFluidUi) :)
